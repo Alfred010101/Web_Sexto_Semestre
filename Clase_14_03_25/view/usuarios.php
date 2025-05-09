@@ -12,6 +12,21 @@
     </div>
 </div>
 
+<div>
+    <table class="table table-striped table-hover" name="tabla_usuarios" id="tabla_usuarios">
+        <thead>
+            <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Carrera</th>
+            <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+
 <div id="formulario">
     <div class="mb-3">
         <label for="txt_nombre" class="form-label">Nombre</label>

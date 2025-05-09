@@ -2,6 +2,7 @@ function init() {
   document.getElementById("tarjeta").style.display = "block";
   document.getElementById("formulario").style.display = "none";
   document.getElementById("datos").style.display = "none";
+  listar_usuarios();
 }
 
 function mostrar_formulario() {
@@ -32,6 +33,21 @@ function guardar_datos() {
   $("#txt_nombre").val("");
   $("#txt_carrera").val("");
   $("#tipo_usuario").prop("checked", false);
+}
+
+function listar_usuarios() {
+  console.log("hola");
+  $("#tabla_usuarios").DataTable({
+    destroy: true,
+    ajax: {
+      type: "POST",
+      url: "../ajax/formulario.php?option=listar_usuarios",
+      dataSrc: "",
+    },
+    columns: [{ data: "nombre" }, { data: "carrera" }, { data: "boton" }],
+    iDisplayLength: 3,
+    order: [2, "des"],
+  });
 }
 
 init();
