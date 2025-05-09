@@ -15,14 +15,22 @@
             }
         }
 
-        public function listar_usuarios(){   
-            console.log("hola como aquii")         
+
+        public function editar_usuario($nombre, $carrera, $tipo, $id){
+            $query = "UPDATE user SET nombre='$nombre', carrera='$carrera', tipo='$tipo' WHERE id='$id'";
+            $sql = Conexion::conectar()->prepare($query);
+            if($sql->execute()){
+                return $sql;
+            }else{
+                return false;
+            }
+        }
+
+        public function listar_usuarios(){         
             $query = "SELECT id, nombre, carrera FROM user";
             $sql = Conexion::conectar()->prepare($query);
-            console.log($sql)
             if($sql->execute()){
                 $rows = $sql->fetchAll(\PDO::FETCH_OBJ);
-                
                 return json_encode($rows);
             }else{
                 return false;

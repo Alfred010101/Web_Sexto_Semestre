@@ -36,17 +36,16 @@ function guardar_datos() {
 }
 
 function listar_usuarios() {
-  console.log("hola");
   $("#tabla_usuarios").DataTable({
     destroy: true,
     ajax: {
       type: "POST",
       url: "../ajax/formulario.php?option=listar_usuarios",
-      dataSrc: "",
+      dataSrc: "data",
     },
     columns: [{ data: "nombre" }, { data: "carrera" }, { data: "boton" }],
     iDisplayLength: 3,
-    order: [2, "des"],
+    order: [2, "desc"],
   });
 }
 

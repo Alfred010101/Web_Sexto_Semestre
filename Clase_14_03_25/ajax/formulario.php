@@ -11,7 +11,6 @@
             echo $respuesta ? 'OK' : 'Fail';
             break;
         case 'listar_usuarios':
-            console.log("hola como estas");
             $res = $operaciones->listar_usuarios();
             $data=[];
             
@@ -20,6 +19,7 @@
             }
             
             echo json_encode(["data" => $data]);
+            break;
         default:
             echo 'No existe esa petición';
     }
