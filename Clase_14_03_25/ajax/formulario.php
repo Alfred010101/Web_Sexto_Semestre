@@ -5,9 +5,9 @@
     $carrera = isset($_POST['carrera']) ? ($_POST['carrera']) : "";
     $tipo = isset($_POST['tipo']) ? ($_POST['tipo']) : "";
 
-    switch($_GET['opcion']){
-        case 'ingresa_usuario':
-            $respuesta = $operaciones->altaUsuario('Luis','ISW', '1');
+    switch($_GET['option']){
+        case 'alta_usuario':
+            $respuesta = $operaciones->altaUsuario($nombre, $carrera, $tipo);
             echo $respuesta ? 'OK' : 'Fail';
             break;
 
