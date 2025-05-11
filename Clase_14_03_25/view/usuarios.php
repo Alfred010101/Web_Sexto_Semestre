@@ -16,6 +16,7 @@
     <table class="table table-striped table-hover" name="tabla_usuarios" id="tabla_usuarios">
         <thead>
             <tr>
+            <th scope="col">ID</th>
             <th scope="col">Nombre</th>
             <th scope="col">Carrera</th>
             <th scope="col">Opciones</th>

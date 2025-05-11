@@ -26,6 +26,16 @@
             }
         }
 
+        public function eliminar_usuario($id){
+            $query = "DELETE FROM user WHERE id='$id'";
+            $sql = Conexion::conectar()->prepare($query);
+            if($sql->execute()){
+                return $sql;
+            }else{
+                return false;
+            }
+        }
+
         public function listar_usuarios(){         
             $query = "SELECT id, nombre, carrera FROM user";
             $sql = Conexion::conectar()->prepare($query);

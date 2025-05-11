@@ -43,10 +43,24 @@ function listar_usuarios() {
       url: "../ajax/formulario.php?option=listar_usuarios",
       dataSrc: "data",
     },
-    columns: [{ data: "nombre" }, { data: "carrera" }, { data: "boton" }],
+    columns: [{data: "id"}, { data: "nombre" }, { data: "carrera" }, { data: "boton" }],
     iDisplayLength: 3,
     order: [2, "desc"],
   });
+}
+
+function eliminar_usuario(id){
+  if (confirm("Seguro de eliminar este usuario")) {
+    $.ajax({
+      type: "POST",
+      url: "../ajax/formulario.php?option=eliminar_usuario",
+      data:{id:id},
+      success:function(response){
+        alert(response)
+        init(1)
+      }
+    })
+  }
 }
 
 init();
