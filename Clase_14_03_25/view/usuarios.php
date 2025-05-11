@@ -3,7 +3,7 @@
 ?>
 <div id="tarjeta">
     <div class="card" style="width: 18rem;">
-    <img src="img/HackerRank.png" class="card-img-top" alt="...">
+    <img src="https://cdn-icons-png.flaticon.com/512/3518/3518732.png" width="30px" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">Empecemos con el registro</h5>
             <p class="card-text">Solo te llevara un momento</p>
@@ -12,7 +12,19 @@
     </div>
 </div>
 
-<div>
+<div id="tarjeta2">
+    <div class="card" style="width: 18rem;">
+    <img src="https://cdn-icons-png.flaticon.com/512/3518/3518732.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Consultar usuarios</h5>
+            <p class="card-text">Solo te llevara un momento</p>
+            <a href="#" onclick="mostrar_usuarios()" class="btn btn-primary">Mostar usuarios</a>
+        </div>
+    </div>
+</div>
+
+<div id="cont_tabla_usuarios">
+    <button type="button" class="btn btn-dark" onclick="init()"> Regresar </button>
     <table class="table table-striped table-hover" name="tabla_usuarios" id="tabla_usuarios">
         <thead>
             <tr>
